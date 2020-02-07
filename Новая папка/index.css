@@ -24,9 +24,15 @@ html {
 	margin-top: 5%;
 	height:100%;
 	width:100%;
+	user-select:none;
 }
 
+<<<<<<< HEAD
 body { 
+=======
+ body{ 
+	background-size: cover;
+>>>>>>> upstream/master
 	height:100%;
 	width:100%;
 }
