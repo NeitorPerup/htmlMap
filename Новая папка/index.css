@@ -19,25 +19,30 @@ html {
 	position: relative;
 }
 .map {
-    position: relative;
-    text-align: center;
+  position: relative;
+  text-align: center;
 	margin-top: 5%;
 	height:100%;
 	width:100%;
 	user-select:none;
 }
 
-<<<<<<< HEAD
+
 body { 
-=======
- body{ 
-	background-size: cover;
->>>>>>> upstream/master
+  upstream/master
 	height:100%;
 	width:100%;
 }
 
+
 svg {
+#map{
+	height: 65%;
+	width: 65%;
+}
+
+svg
+{
     position: absolute;
     top: 0;
     left: 0;
