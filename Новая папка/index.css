@@ -27,12 +27,9 @@ html {
 	user-select:none;
 }
 
-<<<<<<< HEAD
+
 body { 
-=======
- body{ 
 	background-size: cover;
->>>>>>> upstream/master
 	height:100%;
 	width:100%;
 }
