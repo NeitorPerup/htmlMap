@@ -10,10 +10,17 @@
 	</head> 
 	
 	<body>
+		<div class="date">
+				<?php
+				echo date ("d.m.Y H:i");
+				?>
+			</div>
 		<header class="header">
 			<div class="header-border"><h2 class="text">Карта России</h2></div>
 		</header>
+
 		
+	
 		<form>
 			<input type="text" placeholder="Искать здесь...">
 			<button type="submit"></button>
