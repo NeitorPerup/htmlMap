@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Suez+One&display=swap');
 
-.header {
-  border-bottom: 2px solid #000000;
+header {
+ 	border-bottom: 2px solid #000000;
+ 	height: 80px;
+ 	background: transparent;
 }
 
+
 .header-border {
-  margin:50px auto;
-  height:200px;
-  width:200px;
-  padding: 50px;
 }
 .text {
   text-align:center; 
   vertical-align: center;
   position: relative;
+  padding-top: 20px;
 }
 .map
 {
@@ -59,24 +59,24 @@ path:hover
     transition: 0.3s;
 }
 
-span{
-	color: green;
-	float:left;
-}
-
 .description{
 	display: none;
 	position: absolute;
 	opacity: 0.9;
-	background: #c2c2c2;
+	background: #333;
 	color: #F4690E;
-	font-family: Trebuchet MS, Helvetica;
+	font-family: Tahoma, Helvetica;
 	text-align: center;
 	padding: 10px;
 	box-sizing: border-box;
-	width: 330px;
-	height:550px;
+	width: calc(20% + 65px);
+	height:85%;
 	bottom:10px;
+}
+
+span{
+	color: green;
+	text-align: justify;
 }
 
 form {
