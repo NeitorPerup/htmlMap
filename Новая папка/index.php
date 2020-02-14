@@ -23,7 +23,7 @@ $connect =  mysqli_connect("localhost", "root", "", "test_db") or die("Error");
 
 	
 		<form method = "post">
-			<input type="text" name="search" class="search" placeholder="Искать здесь..."><input type="submit" name = "submit" value="Поиск">
+			<input type="text" name="search" class="search" placeholder="Введите номер или название региона"><input type="submit" name = "submit" value="Поиск">
 			
 		</form>
 
