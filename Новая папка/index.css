@@ -59,14 +59,21 @@ path:hover
     transition: 0.3s;
 }
 
+h6{
+	text-align: center;
+	color: #FF1400;
+	text-decoration: underline;
+	
+}
+
 .description{
 	display: none;
 	position: absolute;
 	opacity: 0.9;
 	background: #333;
-	color: #F4690E;
+	color: #037CE5;
 	font-family: Tahoma, Helvetica;
-	text-align: center;
+	text-align: left;
 	padding: 10px;
 	box-sizing: border-box;
 	width: calc(20% + 65px);
@@ -74,10 +81,6 @@ path:hover
 	bottom:10px;
 }
 
-span{
-	color: green;
-	text-align: justify;
-}
 
 form {
   position: relative;
