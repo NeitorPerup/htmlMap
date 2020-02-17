@@ -7,14 +7,14 @@ $connect =  mysqli_connect("localhost", "root", "", "test_db") or die("Error");
 <html lang = "ru">
 	<head>
 		<meta charset = "utf-8"/>
-		<title>Styles Conferences</title>
+		<title>Цифровая экономика России</title>
 		<link rel="apple-touch-icon" sizes="180x180" href="favicon.ico/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="favicon.ico/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="favicon.ico/favicon-16x16.png">
 		<link rel="manifest" href="favicon.ico/site.webmanifest">
 		<link rel="mask-icon" href="favicon.ico/safari-pinned-tab.svg" color="#5bbad5">
 		<meta name="msapplication-TileColor" content="#da532c">
-		<meta name="theme-color" content="#ffffff">
+		<meta name="theme-color" content="#ffffff">	
 		<link rel = "stylesheet" href = "index.css">
 		<link rel = "stylesheet" href = "css/bootstrap.css">
 		<script type = "text/javascript" src = "js/jquery-3.4.1.js"></script>
@@ -29,16 +29,10 @@ $connect =  mysqli_connect("localhost", "root", "", "test_db") or die("Error");
 		</header>
 
 	
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3 offset-md-7 col-sm-2 offset-sm-5 col-xs-2 offset-col-xs-4">  
-					<form method = "post">
-						<input type="text" name="search" class="search" placeholder="Введите номер или название региона"><input type="submit" name = "	submit" value="Поиск">
+		<form method = "post">
+				<input type="text" name="search" class="search" placeholder="Введите номер или название региона"><input type="submit" name = "	submit" value="Поиск">
 			
-					</form>
-				</div>
-			</div>
-		</div>
+		</form>
 
 		<?php
 
