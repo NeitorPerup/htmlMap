@@ -2,12 +2,13 @@
 
 header {
  	border-bottom: 2px solid #000000;
- 	height: 80px;
+ 	height: 100px;
  	background: transparent;
+ 	background-image: url(https://www.culture.ru/storage/images/ce8b2e2aba46ad75febab08c3ba098a5/8f8c238a986fdd77a0662c494dd719fc.jpg);
+
 }
-
-
 .header-border {
+	
 }
 .text {
   text-align:center; 
@@ -68,25 +69,29 @@ path:hover
     transition: 0.3s;
 }
 
+h6{
+	text-align: center;
+	color: #FF1400;
+	text-decoration: underline;
+	
+}
+
 .description{
 	display: none;
-	position: absolute;
+	left: 10px;
+	position: fixed;
 	opacity: 0.9;
 	background: #333;
-	color: #F4690E;
+	color: #037CE5;
 	font-family: Tahoma, Helvetica;
-	text-align: center;
+	text-align: left;
 	padding: 10px;
 	box-sizing: border-box;
 	width: calc(20% + 65px);
 	height:85%;
-	bottom:10px;
+	top:110px;
 }
 
-span{
-	color: green;
-	text-align: justify;
-}
 
 form {
   position: relative;
@@ -104,21 +109,5 @@ input {
   background: #F9F0DA;
   color: #9E9C9C;
 }
-button {
-  position: absolute; 
-  top: 0;
-  right: 0px;
-  width: 42px;
-  height: 42px;
-  border: none;
-  background: #7BA7AB;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-}
-button:before {
-  content: "\f002";
-  font-family: FontAwesome;
-  font-size: 16px;
-  color: #F9F0DA;
-}
+
 
