@@ -7,7 +7,7 @@ $connect =  mysqli_connect("localhost", "root", "", "test_db") or die("Error");
 <html lang = "ru">
 	<head>
 		<meta charset = "utf-8"/>
-		<title>Styles Conferences</title>
+		<title>Цифровая экономика России</title>
 		<link rel = "stylesheet" href = "index.css">
 		<link rel = "stylesheet" href = "css/bootstrap.css">
 		<script type = "text/javascript" src = "js/jquery-3.4.1.js"></script>
@@ -22,16 +22,10 @@ $connect =  mysqli_connect("localhost", "root", "", "test_db") or die("Error");
 		</header>
 
 	
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3 offset-md-7 col-sm-2 offset-sm-5 col-xs-2 offset-col-xs-4">  
-					<form method = "post">
-						<input type="text" name="search" class="search" placeholder="Введите номер или название региона"><input type="submit" name = "	submit" value="Поиск">
+		<form method = "post">
+				<input type="text" name="search" class="search" placeholder="Введите номер или название региона"><input type="submit" name = "	submit" value="Поиск">
 			
-					</form>
-				</div>
-			</div>
-		</div>
+		</form>
 
 		<?php
 
