@@ -15,6 +15,15 @@ header {
   position: relative;
   padding-top: 20px;
 }
+.searchname{
+
+  text-align: center;
+}
+.searchres{
+  
+ margin-left: 20px;
+ padding-left: 20px;
+}
 .map
 {
     position: relative;
