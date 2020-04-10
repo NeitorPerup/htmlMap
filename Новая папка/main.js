@@ -26,5 +26,11 @@ $('document').ready(function(){
 	
 	$('[data-toggle="tooltip"]').tooltip ();
 	
+	$('.dropdown-item').on('click', function() {
+		var name = $(this).attr('class').split(' ')[0];
+		/*name = '"' + name + '"';*/
+		$('.description').html($('[title="Якутия"]').attr('description-data'));
+		$('.description').fadeIn(50);
+	}) 
 });
 });
