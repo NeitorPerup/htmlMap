@@ -8,6 +8,7 @@ $connect =  mysqli_connect("localhost", "root", "", "test_db") or die("Error");
 	<head>
 		<meta charset = "utf-8"/>
 		<title>Цифровая экономика России</title>
+		<link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA3/APr6/wD/AA0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERERERERERERERERERERERERERERERERERERERERERERERERERERETMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA" rel="icon" type="image/x-icon" />
 		<link rel = "stylesheet" href = "index.css">
 		<link rel = "stylesheet" href = "css/bootstrap.css">
 		<script type = "text/javascript" src = "js/jquery-3.4.1.js"></script>
@@ -18,14 +19,99 @@ $connect =  mysqli_connect("localhost", "root", "", "test_db") or die("Error");
 	
 	<body>
 		<header class="header">
-			<div class="header-border"><h2 class="text">Карта России</h2></div>
+			<div class="header-border"><h2 class="text">Уровень развития цифровой экономики в регионах России</h2></div>
 		</header>
 
 	
 		<form method = "post">
-				<input type="text" name="search" class="search" placeholder="Введите номер или название региона"><input type="submit" name = "submit" value="Поиск">
+			<input type="text" name="search" class="search"  list = "regions" placeholder="Введите номер или название региона"><input type="submit" name = "submit" value="Поиск">
 			
 		</form>
+		
+		<datalist id = "regions">
+		    <option value = "Адыгея">
+			<option value = "Башкортостан">
+			<option value = "Бурятия">
+			<option value = "Алтай">
+			<option value = "Дагестан">
+			<option value = "Ингушетия">
+			<option value = "Кабардино-Балкария">
+			<option value = "Калмыкия">
+			<option value = "Карачаево-Черкессия">
+			<option value = "Карелия">
+			<option value = "Коми">
+			<option value = "Марий Эл">
+			<option value = "Мордовия">
+			<option value = "Якутия">
+			<option value = "Северная Осетия">
+			<option value = "Татарстан">
+			<option value = "Тыва">
+			<option value = "Удмуртия">
+			<option value = "Хакасия">
+			<option value = "Чечня">
+			<option value = "Чувашия">
+			<option value = "Aлтайский край">
+			<option value = "Краснодар">
+			<option value = "Красноярск">
+			<option value = "Приморье">
+			<option value = "Ставрополь">
+			<option value = "Хабаровск">
+			<option value = "Амурская область">
+			<option value = "Архангельск">
+			<option value = "Астрахань">
+			<option value = "Белгород">
+			<option value = "Брянск">
+			<option value = "Владимир">
+			<option value = "Волгоград">
+			<option value = "Вологда">
+			<option value = "Воронеж">
+			<option value = "Иваново">
+			<option value = "Иркутск">
+			<option value = "Калининград">
+			<option value = "Калуга">
+			<option value = "Камчатка">
+			<option value = "Кемерово">
+			<option value = "Киров">
+			<option value = "Кострома">
+			<option value = "Курган">
+			<option value = "Курск">
+			<option value = "Санкт-Петербург">
+			<option value = "Липецк">
+			<option value = "Магадан">
+			<option value = "Москва">
+			<option value = "Мурманск">
+			<option value = "Нижний_Новгород">
+			<option value = "Великий_Новгород">
+			<option value = "Новосибирск">
+			<option value = "Омcк">
+			<option value = "Оренбург">
+			<option value = "Орел">
+			<option value = "Пенза">
+			<option value = "Пермь">
+			<option value = "Псков">
+			<option value = "Ростов">
+			<option value = "Рязань">
+			<option value = "Самара">
+			<option value = "Саратов">
+			<option value = "Сахалин">
+			<option value = "Екатеринбург">
+			<option value = "Смоленск">
+			<option value = "Тамбов">
+			<option value = "Тверь">
+			<option value = "Томск">
+			<option value = "Тула">
+			<option value = "Тюмень">
+			<option value = "Ульяновск">
+			<option value = "Челябинск">
+			<option value = "Забайкалье">
+			<option value = "Ярославль">
+			<option value = "Еврейская AO">
+			<option value = "Ненецкий_AO">
+			<option value = "Ханты-Мансийск">
+			<option value = "Чукотка">
+			<option value = "Ямало-Ненецкий_АО">
+			<option value = "Крым">
+		 </datalist>
 
 		<?php
 
@@ -36,8 +122,8 @@ $connect =  mysqli_connect("localhost", "root", "", "test_db") or die("Error");
 				$i = 0;
 				foreach ($search as $key) {
 					$i++;
-					if($i < $count) $array[] = "CONCAT (`id`, `name`) LIKE '%".$key."%' OR "; 
-					else $array[] = "CONCAT (`id`, `name`) LIKE '%".$key."%'"; 
+					if($i < $count) $array[] = "CONCAT (`id`, `search`) LIKE '%".$key."%' OR "; 
+					else $array[] = "CONCAT (`id`, `search`) LIKE '%".$key."%'"; 
  				}
  				$sql = "SELECT * FROM `regions` WHERE ".implode("", $array);
 				$query = mysqli_query($connect, $sql);
