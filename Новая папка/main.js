@@ -8,12 +8,22 @@ $('document').ready(function(){
 			// $('.description').fadeOut(50);
 		// }
 	// )
-
 	
 	$('.part').on('click', function() {
 		$('.description').html($(this).attr('description-data'));
 		$('.description').fadeIn(50);
 	})
+
+	/*$('.search').on('click', function() {
+		var $n = '<?php echo $name; ?>';
+	      
+		var $d = '<?php echo $description; ?>';
+		$('.description').html("<h6>" + $n + "</h6>" + "<br>" + "<span>" + $d + "</span>");
+		$('.description').fadeIn(50);
+	})*/
+
+	
+
 
 	jQuery(function($){
 	$(document).mouseup(function (e){ // событие клика по веб-документу
@@ -36,7 +46,7 @@ $('document').ready(function(){
 });
 
 
-document.querySelector('#part').oninput = function(){
+document.querySelector('.part').oninput = function(){
 	let val = this.value.trim();
 	let = elasticItems = document.querySelectorAll('.part li');
 	if (val != ''){
