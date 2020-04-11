@@ -134,16 +134,14 @@ $connect =  mysqli_connect("localhost", "root", "", "test_db") or die("Error");
 					$description = $row['description'];
 				}
 			}
-<<<<<<< HEAD
+
 
 			/*$name = $row['name'];
 			echo $name;
 			$description = $row['description'];*/
-
-
-=======
 		}
->>>>>>> e9a221c587191df3f451114fe4e667d2f0a61f4e
+
+
 		?>
 		
 
