@@ -24,7 +24,7 @@ $connect =  mysqli_connect("localhost", "root", "", "test_db") or die("Error");
 
 	
 		<form method = "post">
-			<input type="text" name="search" class="search"  list = "regions" placeholder="Введите номер или название региона"><input type="submit" name = "submit" value="Поиск">
+			<input type="text" name="search" class="search"  list = "regions" placeholder="Введите номер или название региона"><input class = "abc" type="submit" name = "submit" value="Поиск">
 			
 		</form>
 		
@@ -127,10 +127,18 @@ $connect =  mysqli_connect("localhost", "root", "", "test_db") or die("Error");
  				}
  				$sql = "SELECT * FROM `regions` WHERE ".implode("", $array);
 				$query = mysqli_query($connect, $sql);
-				while($row = mysqli_fetch_assoc($query)) echo "<h1>".$row['name']."</h1><p>".$row['description']."</p><br>";
+				while($row = mysqli_fetch_assoc($query)){ $name = $row['name'];
+					$description = $row['description'];
+				}
 			}
 
+			/*$name = $row['name'];
+			echo $name;
+			$description = $row['description'];*/
+
+
 		?>
+		
 
 		<div class = "map">
 			<svg viewBox = "0 0 895 535">
@@ -1521,10 +1529,23 @@ $connect =  mysqli_connect("localhost", "root", "", "test_db") or die("Error");
 			<img src = "image/map.png" alt = "карта России" id = "map"/>
 		</div>
 		
+
 		<div class = "description">
 			
 		</div>
+
+
+
+		<script>
+		    var $n = '<?php echo $name; ?>';
+			      
+			var $d = '<?php echo $description; ?>';
+			$('.description').html("<h6>" + $n + "</h6>" + "<span>" + $d + "</span>");
+			$('.description').fadeIn(50);
+			
+		</script>
 			
 	
 	</body>
+
 </html>
