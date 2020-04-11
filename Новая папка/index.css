@@ -1,12 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Suez+One&display=swap');
-header {
- 	border-bottom: 2px solid #000000;
- 	height: 100px;
- 	background: transparent;
- 	background-image: url(https://www.culture.ru/storage/images/ce8b2e2aba46ad75febab08c3ba098a5/8f8c238a986fdd77a0662c494dd719fc.jpg);
+
+html{
+  width:94%;
 }
-
-
 h1{
     text-align: center;
     margin-top: 100px;
@@ -27,7 +23,7 @@ p{
 {
     position: relative;
     text-align: center;
-	margin-left: 65px;
+	margin-left: 80px;
 	height:100%;
 	width:100%;
 	user-select:none;
@@ -38,7 +34,13 @@ p{
 	height:100%;
 	width:100%;
 }
-
+header {
+  border-bottom: 2px solid #000000;
+  height: 100px;
+  width: 106.4%;
+  background: transparent;
+  background-image: url(https://www.culture.ru/storage/images/ce8b2e2aba46ad75febab08c3ba098a5/8f8c238a986fdd77a0662c494dd719fc.jpg);
+}
 #map{
 	height: 65%;
 	width: 65%;
@@ -68,8 +70,9 @@ path:hover
 }
 
 .description{
-	display: none;
+  display: none;
 	left: 10px;
+  height:85%;
 	position: fixed;
 	opacity: 0.9;
 	background: #333;
@@ -79,7 +82,6 @@ path:hover
 	padding: 10px;
 	box-sizing: border-box;
 	width: calc(20% + 65px);
-	height:85%;
 	top:110px;
 }
 
